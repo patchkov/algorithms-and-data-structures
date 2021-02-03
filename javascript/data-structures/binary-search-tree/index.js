@@ -64,8 +64,9 @@ export class BST {
       } else if (!node.left && node.right) {
         return node.right;
       } else {
-        // removing element with 2 children is actually copy value one form of "neighbors"
-        // and removing that neighbor from the tree
+        // removing element with 2 children is actually 
+        // (1) copy value one form of "neighbors"
+        // (2) removing the neighbor from the tree
         const newRoot = this.findTheMaxInSubTree(node.left);
         node.value = newRoot.value;
         node.left = this.removeRecursively(node.left, newRoot.value);

@@ -4,8 +4,8 @@ export function bubbleSort(arr, desc = false) {
   // "n-i-1" decreases number of inner iterations
   for (let i = 0; i < n - 1; i++) {
     for (let j = 0; j < n - i - 1; j++) {
-      // swap elements only if they are in incorrect positions, what causes that stable algorithm
-      // for equals elements swapping doesn't occur
+      // swap elements only if they are in incorrect positions
+      // for equals elements swapping doesn't occur (stable)
       if (isIncorrectPosition(arr[j], arr[j + 1], desc)) {
         const temp = arr[j];
         arr[j] = arr[j + 1];
